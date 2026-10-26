@@ -10,6 +10,7 @@ I specialize in software development for robotic platforms and AI-powered applic
 - **LinkedIn**: https://linkedin.com/in/ignacio-villanua-cuenca/
 - **GitHub**: https://github.com/Villanua
 - **Website**: https://ignacio-villanua.com/
+- **Full profile**: /llms-full.txt (extended career history, projects, education, and skills)
 
 ## Professional Experience
 
