@@ -15,21 +15,39 @@ He has worked in research and industrial environments and enjoys challenges that
 - GitHub: https://github.com/Villanua
 - Website: https://ignacio-villanua.com/
 
-Nacho is committed to his current projects at ICAI Comillas and Syntonize and is open to conversations about collaborations, technical consulting, and projects involving robotics and AI. The website indicates a typical response time of 24–48 hours.
+Nacho is currently focused on his projects at Alisys and ICAI Comillas. In October 2026, he delivered a one-off executive masterclass at ISDI in partnership with EY. He is open to conversations about collaborations, technical consulting, and projects involving robotics and AI. The website indicates a typical response time of 24–48 hours.
 
 ## Professional Experience
 
-### Teaching Assistant, Mobile Robotics — ICAI Comillas
+### Robotics Specialist — Alisys
+
+**May 2026–Present**
+
+Responsible for the end-to-end software development of autonomous navigation systems, sensor integration, and field testing for mobile robotic platforms (UGVs and quadrupeds) in critical and industrial environments.
+
+#### Key Projects
+
+- **Autonomous UGV Navigation & Digital Twin:** Designed and developed from scratch the complete outdoor autonomous navigation software stack. Implemented complex sensor fusion using 3D LiDAR (Ouster), Dual-Antenna GNSS RTK, and wheel encoders for high-precision positioning and autonomous docking maneuvers. Built a high-fidelity Digital Twin in Gazebo for realistic simulation and software validation prior to critical 24/7 deployment at a military base.
+- **Spot Payload Integration & 3D Scanning:** Integrated a Leica LiDAR payload with Spot CORE on a Boston Dynamics Spot robot, enabling automated 3D point cloud generation and spatial mapping in new construction environments.
+- **Extreme Environment Testing:** Conducted field testing and sensory performance evaluation of a quadruped robot (V60) inside a simulated tunnel fire. Analyzed localization stability, thermal drift, and sensor degradation (LiDAR/IMU) under severe smoke and high-temperature conditions to assess operational viability for search and rescue operations.
+
+### Associate Professor of Mobile Robotics — ICAI, Universidad Pontificia Comillas
 
 **January 2026–Present**
 
-Supervises and teaches practical mobile robotics sessions for undergraduate students. The sessions cover autonomous navigation, localization, and control on real robotic platforms, with a focus on SLAM and AMCL localization algorithms, planning, and trajectory tracking.
+Leads practical sessions and laboratories for undergraduate students focused on the design and implementation of autonomous navigation, localization, and control systems for robotic platforms. Mentors students in embedded software development and control architecture using industry-standard tools.
+
+### Guest Lecturer, Executive Program — ISDI in partnership with EY
+
+**October 2026**
+
+Delivered a one-off executive masterclass for executives and middle managers on the strategic adoption of Artificial Intelligence, Robotics, and Autonomous Systems.
 
 ### Software Developer — Syntonize
 
-**July 2025–Present**
+**July 2025–April 2026**
 
-Consults for UNIR (Proeduca) on Generative AI applications. Responsibilities include designing solution architectures, deployments, stakeholder communication, and production application monitoring.
+Consulted for UNIR (Proeduca) on Generative AI applications. Responsibilities included designing solution architectures, deployments, stakeholder communication, and production application monitoring.
 
 #### Generative AI and Cloud Projects
 

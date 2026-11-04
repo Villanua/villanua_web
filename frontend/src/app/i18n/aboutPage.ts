@@ -18,10 +18,34 @@ export const aboutPageTranslations = {
     skillsLabel: "03 / Habilidades",
     
     // Experience details
+    alisys: {
+      clickToExpand: "Ver más detalles",
+      clickToCollapse: "Ver menos detalles",
+      intro1: "Desarrollo de software de principio a fin para sistemas de navegación autónoma, integración de sensores y pruebas de campo en plataformas robóticas móviles para entornos críticos e industriales.",
+      projectTitle: "Robótica y Sistemas Autónomos",
+      projectList: [
+        "**Navegación autónoma de UGV y gemelo digital:** desarrollo desde cero del software de navegación exterior, fusionando LiDAR 3D **Ouster**, GNSS RTK de doble antena y encoders de rueda para posicionamiento preciso y maniobras de acoplamiento autónomo. Creación de un gemelo digital de alta fidelidad en **Gazebo** para validar el sistema antes de su despliegue crítico 24/7 en una base militar.",
+        "**Integración de carga útil en Spot y escaneo 3D:** integración de un LiDAR **Leica** con Spot CORE en un robot **Boston Dynamics Spot** para generar nubes de puntos 3D y mapas espaciales en obras de nueva construcción.",
+        "**Pruebas en entornos extremos:** evaluación de un cuadrúpedo **V60** en un incendio simulado en túnel. Análisis de la estabilidad de localización, deriva térmica y degradación de sensores LiDAR/IMU bajo humo denso y altas temperaturas para valorar su uso en operaciones de búsqueda y rescate."
+      ]
+    },
     icai: {
       clickToExpand: "Ver más detalles",
       clickToCollapse: "Ver menos detalles",
-      intro1: "Supervisión de sesiones prácticas de robótica móvil para alumnos de grado. Instrucción enfocada en algoritmos de **localización** (**SLAM**, **AMCL**), **planificación** y **seguimiento de trayectorias** en plataformas reales.",
+      intro1: "Dirección de sesiones prácticas y laboratorios de robótica móvil para alumnos de grado, enfocados en el diseño e implementación de sistemas de **navegación autónoma**, **localización** y **control** de plataformas robóticas.",
+      projectTitle: "Docencia y Mentoría",
+      projectList: [
+        "Mentoría a alumnos en el desarrollo de **software embarcado** y **arquitecturas de control**, utilizando herramientas estándar de la industria."
+      ]
+    },
+    isdi: {
+      clickToExpand: "Ver más detalles",
+      clickToCollapse: "Ver menos detalles",
+      intro1: "Impartición puntual, en octubre de 2026, de una masterclass ejecutiva para directivos y mandos intermedios en el Executive Program de **ISDI**, en alianza con **EY**.",
+      projectTitle: "Tecnología y Estrategia",
+      projectList: [
+        "Adopción estratégica de **Inteligencia Artificial**, **Robótica** y **Sistemas Autónomos** en organizaciones."
+      ]
     },
     syntonize: {
       clickToExpand: "Ver más detalles",
@@ -146,10 +170,34 @@ export const aboutPageTranslations = {
     skillsLabel: "03 / Skills",
     
     // Experience details
+    alisys: {
+      clickToExpand: "See more details",
+      clickToCollapse: "See less details",
+      intro1: "End-to-end software development for autonomous navigation systems, sensor integration, and field testing on mobile robotic platforms for critical and industrial environments.",
+      projectTitle: "Robotics & Autonomous Systems",
+      projectList: [
+        "**Autonomous UGV navigation & digital twin:** built the outdoor autonomous navigation stack from scratch, fusing 3D **Ouster LiDAR**, dual-antenna GNSS RTK, and wheel encoders for precise positioning and autonomous docking. Created a high-fidelity **Gazebo** digital twin to validate the system before critical 24/7 deployment at a military base.",
+        "**Spot payload integration & 3D scanning:** integrated a **Leica LiDAR** payload with Spot CORE on a **Boston Dynamics Spot** robot to generate 3D point clouds and spatial maps at new construction sites.",
+        "**Extreme-environment testing:** evaluated a **V60** quadruped in a simulated tunnel fire. Analyzed localization stability, thermal drift, and LiDAR/IMU sensor degradation in dense smoke and high temperatures to assess its viability for search-and-rescue operations."
+      ]
+    },
     icai: {
       clickToExpand: "See more details",
       clickToCollapse: "See less details",
-      intro1: "Supervision of practical mobile robotics sessions for undergraduate students. Instruction focused on **localization** algorithms (**SLAM**, **AMCL**), **planning**, and **trajectory tracking** on real platforms.",
+      intro1: "Leading practical mobile robotics sessions and labs for undergraduate students, focused on the design and implementation of **autonomous navigation**, **localization**, and **control** systems for robotic platforms.",
+      projectTitle: "Teaching & Mentoring",
+      projectList: [
+        "Mentoring students in the development of **embedded software** and **control architectures** using industry-standard tools."
+      ]
+    },
+    isdi: {
+      clickToExpand: "See more details",
+      clickToCollapse: "See less details",
+      intro1: "Delivered a one-off executive masterclass in October 2026 for executives and middle managers in the **ISDI** Executive Program, in partnership with **EY**.",
+      projectTitle: "Technology & Strategy",
+      projectList: [
+        "Strategic adoption of **Artificial Intelligence**, **Robotics**, and **Autonomous Systems** across organizations."
+      ]
     },
     syntonize: {
       clickToExpand: "See more details",

@@ -128,9 +128,11 @@ export default function AboutPage({ education, experience, courses, skills }: Ab
             </motion.div>
             <div className="space-y-8">
               {experience.map((exp: any, index: number) => {
-                const details = exp.company === 'Acciona' ? t.acciona : 
+                const details = exp.company === 'Alisys' ? t.alisys :
+                              exp.company === 'Acciona' ? t.acciona :
                               exp.company === 'Syntonize' ? t.syntonize : 
-                              exp.company === 'ICAI Comillas' ? t.icai : null;
+                exp.company === 'ICAI - Universidad Pontificia Comillas' ? t.icai :
+                exp.company === 'ISDI' ? t.isdi : null;
                 const hasDetails = !!details;
                 const isExpanded = expandedIndices.includes(index);
                 
@@ -153,9 +155,11 @@ export default function AboutPage({ education, experience, courses, skills }: Ab
                         <h3 className="text-2xl md:text-3xl font-bold text-zinc-900 tracking-tight mb-2">{exp.role}</h3>
                         <p className="text-sm text-zinc-400 font-semibold uppercase tracking-widest">{exp.company}</p>
                       </div>
-                      <div className="text-right">
-                        <span className="text-xs text-zinc-400 font-mono tracking-tighter bg-white px-3 py-1 border border-zinc-100">{exp.period}</span>
-                      </div>
+                      {exp.period && (
+                        <div className="text-right">
+                          <span className="text-xs text-zinc-400 font-mono tracking-tighter bg-white px-3 py-1 border border-zinc-100">{exp.period}</span>
+                        </div>
+                      )}
                     </div>
                     <div className="max-w-4xl">
                       <p className="text-sm text-zinc-600 leading-relaxed font-light mb-6">{renderContent(exp.description)}</p>
@@ -198,7 +202,11 @@ export default function AboutPage({ education, experience, courses, skills }: Ab
                                     >
                                       <div className="absolute top-0 left-0 w-1 h-full bg-zinc-400"></div>
                                       <div className="flex items-center gap-3 mb-6">
-                                        <Sparkles className="w-5 h-5 text-zinc-400" />
+                                        {exp.company === 'Alisys' ? (
+                                          <Wrench className="w-5 h-5 text-zinc-400" />
+                                        ) : (
+                                          <Sparkles className="w-5 h-5 text-zinc-400" />
+                                        )}
                                         <h4 className="text-sm font-bold uppercase tracking-wider text-zinc-900">{details.projectTitle || "Proyectos"}</h4>
                                       </div>
                                       <ul className="space-y-4">
@@ -469,4 +477,3 @@ export default function AboutPage({ education, experience, courses, skills }: Ab
     </div>
   );
 }
-

@@ -14,12 +14,16 @@ I specialize in software development for robotic platforms and AI-powered applic
 
 ## Professional Experience
 
-### Teaching Assistant, Mobile Robotics | ICAI Comillas
+### Associate Professor of Mobile Robotics | ICAI, Universidad Pontificia Comillas
 **January 2026 - Present**
-Supervision of practical sessions on autonomous navigation, localization, and control of robotic systems for undergraduate students.
+Leads practical sessions and laboratories on designing and implementing autonomous navigation, localization, and control systems for robotic platforms. Mentors students in embedded software development and control architecture using industry-standard tools.
+
+### Guest Lecturer, Executive Program | ISDI in partnership with EY
+**October 2026**
+Delivered a one-off executive masterclass for executives and middle managers on the strategic adoption of Artificial Intelligence, Robotics, and Autonomous Systems.
 
 ### Software Developer | Syntonize
-**July 2025 - Present**
+**July 2025 - April 2026**
 Consulting for UNIR (Proeduca) on generative AI applications.
 
 - **NLP and Predictive Marketing:** Development of an application for inferring psychographic profiles (motivations, salaries, age) and estimating personal data of leads using Generative AI to optimize conversion at UNIR.

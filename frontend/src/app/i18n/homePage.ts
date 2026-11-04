@@ -24,7 +24,7 @@ export const homePageTranslations = {
     contactLabel: "Contacto",
     emailResponse: "Responderé lo antes posible",
     availability: "Disponibilidad",
-    availabilityText: "Aunque estoy comprometido con mis proyectos actuales en ICAI Comillas y Syntonize, siempre estoy abierto a conversaciones sobre colaboraciones interesantes, consultoría técnica o proyectos que requieran experiencia en robótica e IA.",
+    availabilityText: "Aunque estoy comprometido con mis proyectos actuales en Alisys e ICAI Comillas, siempre estoy abierto a conversaciones sobre colaboraciones interesantes, consultoría técnica o proyectos que requieran experiencia en robótica e IA.",
     responseTime: "Respondo en un plazo de 24-48 horas. Podemos agendar una llamada, enviarme un email o conectar directamente por LinkedIn.",
   },
   en: {
@@ -52,7 +52,7 @@ export const homePageTranslations = {
     contactLabel: "Contact",
     emailResponse: "I'll respond as soon as possible",
     availability: "Availability",
-    availabilityText: "While I'm committed to my current projects at ICAI Comillas and Syntonize, I'm always open to conversations about interesting collaborations, technical consulting, or projects that require expertise in robotics and AI.",
+    availabilityText: "While I'm committed to my current projects at Alisys and ICAI Comillas, I'm always open to conversations about interesting collaborations, technical consulting, or projects that require expertise in robotics and AI.",
     responseTime: "I respond within 24-48 hours. We can schedule a call, email me, or connect directly on LinkedIn.",
   }
 } as const;

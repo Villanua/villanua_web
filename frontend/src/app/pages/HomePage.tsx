@@ -164,9 +164,11 @@ export default function HomePage({ experience, education }: HomePageProps) {
                         <h4 className="text-xl md:text-2xl font-bold text-zinc-900 tracking-tight">{exp.role}</h4>
                         <p className="text-sm text-zinc-400 font-semibold uppercase tracking-widest">{exp.company}</p>
                       </div>
-                      <div className="text-right">
-                        <span className="text-xs text-zinc-400 font-mono tracking-tighter bg-white px-3 py-1 border border-zinc-100">{exp.period}</span>
-                      </div>
+                      {exp.period && (
+                        <div className="text-right">
+                          <span className="text-xs text-zinc-400 font-mono tracking-tighter bg-white px-3 py-1 border border-zinc-100">{exp.period}</span>
+                        </div>
+                      )}
                     </div>
                     <div className="mt-6 max-w-3xl">
                       <p className="text-sm text-zinc-500 leading-relaxed font-light">{renderContent(exp.description)}</p>
