@@ -13,7 +13,7 @@ Configure the repository in hPanel with:
 | Root directory | `frontend` |
 | Framework / structure | React |
 | Build configuration | Custom |
-| Node.js version | `22.x` |
+| Node.js version | `22.x` (22.12 or newer) |
 | Build command | `npm run build` |
 | Output directory | `dist` |
 | Entry file | Leave empty (static frontend) |
