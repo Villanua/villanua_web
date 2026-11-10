@@ -9,10 +9,11 @@ import { useLanguage, translations } from '../i18n';
 
 interface HomePageProps {
   experience: readonly any[];
+  teachingExperience: readonly any[];
   education: readonly any[];
 }
 
-export default function HomePage({ experience, education }: HomePageProps) {
+export default function HomePage({ experience, teachingExperience, education }: HomePageProps) {
   const lang = useLanguage();
   const t = translations[lang];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -41,6 +42,34 @@ export default function HomePage({ experience, education }: HomePageProps) {
       index % 2 === 1 ? <strong key={index} className="font-medium text-zinc-900">{part}</strong> : part
     );
   };
+
+  const renderExperienceSection = (label: string, entries: readonly any[]) => (
+    <div className="space-y-12">
+      <div className="flex justify-end border-b border-zinc-100 pb-4">
+        <span className="text-[10px] text-zinc-400 uppercase tracking-widest">{label}</span>
+      </div>
+      <div className="grid gap-6">
+        {entries.map((exp, index) => (
+          <div key={index} className="group bg-zinc-50/50 border border-zinc-100/50 p-8 md:p-10 transition-all duration-500 hover:bg-zinc-50 hover:border-zinc-200 hover:shadow-sm">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="space-y-1">
+                <h4 className="text-xl md:text-2xl font-bold text-zinc-900 tracking-tight">{exp.role}</h4>
+                <p className="text-sm text-zinc-400 font-semibold uppercase tracking-widest">{exp.company}</p>
+              </div>
+              {exp.period && (
+                <div className="text-right">
+                  <span className="text-xs text-zinc-400 font-mono tracking-tighter bg-white px-3 py-1 border border-zinc-100">{exp.period}</span>
+                </div>
+              )}
+            </div>
+            <div className="mt-6 max-w-3xl">
+              <p className="text-sm text-zinc-500 leading-relaxed font-light">{renderContent(exp.description)}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-white">
@@ -151,34 +180,8 @@ export default function HomePage({ experience, education }: HomePageProps) {
 
           {/* Summary Sections */}
           <div className="space-y-32">
-            {/* Experience Detail */}
-            <div className="space-y-12">
-              <div className="flex justify-end border-b border-zinc-100 pb-4">
-                <span className="text-[10px] text-zinc-400 uppercase tracking-widest">{t.experienceLabel}</span>
-              </div>
-              <div className="grid gap-6">
-                {experience.map((exp, index) => (
-                  <div key={index} className="group bg-zinc-50/50 border border-zinc-100/50 p-8 md:p-10 transition-all duration-500 hover:bg-zinc-50 hover:border-zinc-200 hover:shadow-sm">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                      <div className="space-y-1">
-                        <h4 className="text-xl md:text-2xl font-bold text-zinc-900 tracking-tight">{exp.role}</h4>
-                        <p className="text-sm text-zinc-400 font-semibold uppercase tracking-widest">{exp.company}</p>
-                      </div>
-                      {exp.period && (
-                        <div className="text-right">
-                          <span className="text-xs text-zinc-400 font-mono tracking-tighter bg-white px-3 py-1 border border-zinc-100">{exp.period}</span>
-                        </div>
-                      )}
-                    </div>
-                    <div className="mt-6 max-w-3xl">
-                      <p className="text-sm text-zinc-500 leading-relaxed font-light">{renderContent(exp.description)}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-
+            {renderExperienceSection(t.experienceLabel, experience)}
+            {renderExperienceSection(t.teachingExperienceLabel, teachingExperience)}
           </div>
         </div>
       </section>

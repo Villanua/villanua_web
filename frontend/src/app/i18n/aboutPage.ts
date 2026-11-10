@@ -3,11 +3,12 @@ export const aboutPageTranslations = {
     // Hero section
     greeting: "¡Hola a todos!",
     imName: "Soy Nacho Villanúa",
-    intro1: "Soy un ingeniero de Robótica e IA, apasionado por el aprendizaje continuo. Mi amor por las matemáticas y la física, junto con una profunda curiosidad sobre cómo funciona el mundo, me ha llevado a enfrentar los emocionantes desafíos de la robótica y la inteligencia artificial.",
-    intro2: "Me especializo en el desarrollo de software para plataformas robóticas y aplicaciones potenciadas por IA, con un fuerte enfoque en IA Generativa y agentes inteligentes. También he trabajado en interfaces web y desplegado soluciones en Google Cloud Platform, siempre buscando construir sistemas que sean tanto técnicamente sólidos como prácticamente valiosos.",
+    intro1: "Soy ingeniero de software y especialista en robótica e IA, con casi cuatro años de experiencia desarrollando tecnología para entornos industriales.",
+    intro2: "Actualmente diseño navegación autónoma para UGVs en Alisys. Antes desarrollé robots móviles y colaborativos en Acciona y soluciones de IA generativa para UNIR a través de Syntonize. También imparto robótica móvil en ICAI.",
     
     // Section headers
-    professionalPath: "Experiencia",
+    professionalPath: "Experiencia profesional",
+    teachingPath: "Experiencia docente",
     academicJourney: "Educación",
     technicalEcosystem: "Habilidades",
     certificationsTitle: "Certificaciones y Cursos",
@@ -24,7 +25,8 @@ export const aboutPageTranslations = {
       intro1: "Desarrollo de software de principio a fin para sistemas de navegación autónoma, integración de sensores y pruebas de campo en plataformas robóticas móviles para entornos críticos e industriales.",
       projectTitle: "Robótica y Sistemas Autónomos",
       projectList: [
-        "**Navegación autónoma de UGV y gemelo digital:** desarrollo desde cero del software de navegación exterior, fusionando LiDAR 3D **Ouster**, GNSS RTK de doble antena y encoders de rueda para posicionamiento preciso y maniobras de acoplamiento autónomo. Creación de un gemelo digital de alta fidelidad en **Gazebo** para validar el sistema antes de su despliegue crítico 24/7 en una base militar.",
+        "**Navegación autónoma de UGV y gemelo digital:** desarrollo desde cero del software de navegación exterior, fusionando LiDAR 3D **Ouster**, GNSS RTK de doble antena y encoders de rueda para posicionamiento preciso. Creación de un gemelo digital de alta fidelidad en **Gazebo** para validar el sistema antes de su despliegue crítico 24/7 en una base militar.",
+        "**Docking autónomo por visión:** desarrollo de un sistema de recarga de precisión con cámara de profundidad **Intel RealSense** y tres marcadores **AprilTag**.",
         "**Integración de carga útil en Spot y escaneo 3D:** integración de un LiDAR **Leica** con Spot CORE en un robot **Boston Dynamics Spot** para generar nubes de puntos 3D y mapas espaciales en obras de nueva construcción.",
         "**Pruebas en entornos extremos:** evaluación de un cuadrúpedo **V60** en un incendio simulado en túnel. Análisis de la estabilidad de localización, deriva térmica y degradación de sensores LiDAR/IMU bajo humo denso y altas temperaturas para valorar su uso en operaciones de búsqueda y rescate."
       ]
@@ -50,14 +52,13 @@ export const aboutPageTranslations = {
     syntonize: {
       clickToExpand: "Ver más detalles",
       clickToCollapse: "Ver menos detalles",
-      intro1: "Diseño de **arquitecturas de soluciones**, **despliegue**, gestión de la **comunicación con stakeholders** y **monitorización** de aplicaciones en **producción**.",
-      projectTitle: "IA Generativa y Cloud",
+      intro1: "Como **Software Developer / AI Engineer**, desarrollo y diseño arquitecturas de soluciones de **IA Generativa** para **UNIR (Proeduca)**. El ecosistema se orquesta con **LangGraph** para gestionar flujos agénticos complejos y se despliega como microservicios en **Microsoft Azure**.",
+      projectTitle: "Proyectos de IA Generativa y Automatización",
       projectList: [
-        "Desarrollo de aplicación para la inferencia de perfiles psicográficos (motivaciones, salarios, edad) y estimación de datos personales de leads usando IA Generativa para optimizar la conversión en UNIR.",
-        "Implementación de un pipeline de análisis de llamadas (**Speech-to-Text** + **LLMs**) para extraer información y evaluar la calidad comercial (auditorías).",
-        "Desarrollo de **agentes de voz en tiempo real** para contestar llamadas telefónicas.",
-        "Diseño de una aplicación de **IA generativa** para recomendación de carreras basada en trayectorias profesionales.",
-        "Despliegues Cloud gestionados con **Terraform** en **Microsoft Azure** (FastAPI, microservicios)."
+        "**1. Perfilado predictivo y personalización de ventas:** motor con **LangGraph** que extrae experiencia, formación e intereses académicos de cada lead y genera en tiempo real intereses estimados, palancas de venta y mensajes personalizados. Desplegado en **Azure Web Apps**, con almacenamiento NoSQL e integración bidireccional con **Salesforce** mediante middleware y APIs REST.",
+        "**2. Auditoría inteligente de llamadas:** pipeline **Speech-to-Text + LLMs** que analiza hasta **3.000 llamadas diarias**, extrae datos del alumno y evalúa a los asesores con rúbricas de calidad. **Arize Phoenix** monitoriza trazas; **MLflow** y **Metabase** gestionan versiones de prompts y métricas. Evaluadores **LLM-as-a-Judge** miden faithfulness, relevancia y cumplimiento de rúbricas frente a un baseline.",
+        "**3. Agentes autónomos de voz y texto:** agentes de voz en tiempo real con **Deepgram**, **ElevenLabs** y **LiveKit (WebRTC)**, con gestión de interrupciones, tool-calling y transferencia a asesores en **Salesforce**. Agente de **WhatsApp** para continuidad asíncrona y agentes adversarios para red teaming y pruebas de casos límite. Despliegue en clústeres **Kubernetes de Azure**, con alertas y observabilidad en tiempo real mediante **Microsoft Teams** y **Telegram**.",
+        "**4. Recomendación de carreras:** aplicación de **IA Generativa** que recomienda itinerarios formativos a partir de trayectorias profesionales."
       ]
     },
     acciona: {
@@ -71,26 +72,25 @@ export const aboutPageTranslations = {
       roboticsSection: {
         title: "Robótica",
         manipulation: {
-            title: "Manipulación y Robots Móviles",
+            title: "Manipulación y Robots Colaborativos",
             items: [
-                "Programación de brazos robóticos colaborativos (**UR3**, **UR10**) para tareas automatizadas, incluyendo clasificación de residuos usando visión 3D e IA.",
-                "Despliegue y programación de un robot móvil **MiR** para navegación autónoma y desinfección en entornos corporativos.",
-                "Operación y mantenimiento de **Spot** (Boston Dynamics), desplegándolo en eventos públicos y zonas de riesgo para inspección.",
-                "Calibración y configuración de **robots submarinos** (ROVs) para inspección y mantenimiento."
+                "**Clasificación de residuos con IA (UR3):** programación de un cobot **UR3** para tareas de pick-and-place. Desarrollo de una tubería de visión artificial con nubes de puntos 3D y modelos de clasificación por IA para detectar, recoger y depositar residuos en sus contenedores.",
+                "**Lijado de superficies con control de fuerza (UR10):** desarrollo de una aplicación de lijado de paredes con un cobot **UR10**, sensor fuerza-par y herramienta de lijado. Implementación de un control **PID** para regular dinámicamente fuerzas lineales y angulares y lograr un acabado uniforme.",
+                "**Inspección submarina:** calibración y configuración de **ROVs** para la inspección y el mantenimiento de infraestructuras submarinas."
             ]
         },
         navigation: {
-            title: "Navegación y Sensores",
+            title: "Navegación Autónoma y Robots Móviles",
             items: [
-                "Diagnóstico y reparación de conexiones y sensores en robot **Summit-XL**, habilitando navegación autónoma con **LiDAR 2D**, **GPS-RTK** e **IMU**, integrados mediante **filtros de Kalman** y **AMCL** en **ROS**.",
-                "Diseño e implementación de algoritmo de seguimiento de trayectoria para **Summit-XL** para patrullas de seguridad nocturnas y detección de anomalías."
+                "**Navegación exterior y teleoperación (Summit-XL):** diseño e implementación del sistema de localización y navegación autónoma para un UGV **Summit-XL**, con mapas georreferenciados y evitación local de obstáculos. Fusión de **LiDAR 2D**, **GPS-RTK** e **IMU** mediante filtros de Kalman y **AMCL**. Desarrollo de una interfaz web de teleoperación de baja latencia con **WebRTC** y **WebSockets**, generación de misiones autónomas y patrullas nocturnas con detección de anomalías.",
+                "**Desinfección del campus (MiR):** despliegue de un robot **MiR** en el campus corporativo para desinfección automatizada. Mapeo de grandes espacios, optimización de rutas y definición semántica de zonas restringidas y preferentes."
             ]
         },
         interfaces: {
-            title: "Interfaces y Robots de Servicio",
+            title: "Plataformas de Servicio e Inspección",
             items: [
-                "Desarrollo de interfaz web de teleoperación en tiempo real (**WebSockets**, **NGINX**, **Docker**) para control remoto del robot.",
-                "Programación de robots de servicio **KettyBot** y **Bellabot** para entrega de alimentos e interacción en cafetería."
+                "**Automatización en hostelería:** programación y despliegue de robots de servicio **Pudu KettyBot** y **BellaBot** en el restaurante del campus para entrega autónoma de comida e interacción con clientes.",
+                "**Inspección industrial:** operación y despliegue de **Spot** de Boston Dynamics para demostraciones a clientes en grandes eventos e inspecciones en zonas corporativas de alto riesgo."
             ]
         }
       },
@@ -101,17 +101,17 @@ export const aboutPageTranslations = {
         generativeAi: {
           title: "IA Generativa y Agentes",
           items: [
-            "Desarrollo de un sistema de ingesta de documentos no estructurados (PDF, Word, Excel, PowerPoint, imágenes) usando **OCR** y **YOLO** para detectar tablas y elementos visuales. El pipeline extrae contenido, genera resúmenes y calcula embeddings para indexado semántico. Orquestado mediante microservicios con **Celery** para integración asíncrona en sistemas **RAG**.",
-            "Construcción de un sistema **RAG** basado en agentes con interacción humana (**HITL**), capaz de ejecutar consultas **SQL** y recuperar respuestas predefinidas. El agente aplica estrategias de reformulación y desambiguación, comunicando transparentemente las fuentes de datos.",
-            "Diseño y desarrollo de un algoritmo de detección de inconsistencias en grandes bases documentales usando filtrado semántico y grafos jerárquicos. Comparación multinivel para identificar contradicciones. Uso de **Knowledge Graphs** y protocolo **MCP**.",
-            "Fine-tuning de **Deepseek** localmente usando **LoRA** y cuantización, y de **Gemini** en **GCP**. Extracción de métricas de sistemas RAG y despliegues en nube."
+            "**Ingesta documental multimodal:** desarrollo de una tubería para documentos PDF, Word, Excel, PowerPoint e imágenes. Uso de **OCR** y **YOLO** para transcripción multimodal, detección de tablas y extracción de elementos visuales; generación de resúmenes y embeddings semánticos, con orquestación asíncrona mediante microservicios **Celery**.",
+            "**RAG agéntico con interacción humana:** arquitectura **RAG** basada en agentes con capacidades **HITL**. Los agentes formulan y ejecutan consultas **SQL**, reformulan preguntas complejas, desambiguan intenciones y citan las fuentes de datos, gestionando referencias solapadas o contradictorias.",
+            "**Detección de inconsistencias con grafos de conocimiento:** algoritmo semántico para grandes colecciones documentales corporativas. Uso de **Knowledge Graphs** y relaciones jerárquicas para comparar documentos en varios niveles e identificar contradicciones y cláusulas solapadas en textos legales y técnicos.",
+            "**Ajuste fino local de LLMs:** fine-tuning de modelos **DeepSeek** mediante **LoRA** y cuantización para optimizar rendimiento e inferencia en hardware limitado. Extracción de métricas de sistemas RAG y despliegue de soluciones en **Google Cloud Platform (GCP)**."
           ]
         },
         dataScience: {
           title: "Ciencia de Datos",
           items: [
-            "Desarrollo de un sistema de modelado predictivo para optimizar estrategias en licitaciones públicas, combinando **Redes Neuronales**, **KNN** y simulaciones de **Monte Carlo**. Integración en interfaz web para ajuste de parámetros.",
-            "Entrenamiento de una red neuronal convolucional (**CNN**) con **TensorFlow** para detectar grietas en carreteras, automatizando flujos de inspección."
+            "**Optimización de licitaciones públicas (baja temeraria):** sistema predictivo para optimizar ofertas y pronosticar bajas temerarias. Combinación de simulaciones de **Monte Carlo**, **KNN** para encontrar licitaciones históricas similares, embeddings de **NLP** para analizar documentos y una red neuronal que predice el número exacto de competidores, superando la referencia interna de Acciona. Integración en una aplicación **Django** para ajustar parámetros y explorar escenarios.",
+            "**Visión artificial para infraestructuras:** entrenamiento de una red neuronal convolucional (**CNN**) con **TensorFlow** y conjuntos de imágenes anotadas para detectar y clasificar grietas en carreteras y agilizar las inspecciones de infraestructuras."
           ]
         }
       },
@@ -155,11 +155,12 @@ export const aboutPageTranslations = {
     // Hero section
     greeting: "Hello Everyone!",
     imName: "I'm Nacho Villanúa",
-    intro1: "I'm a Robotics & AI engineer, passionate about continuous learning. My love for mathematics and physics, along with a deep curiosity about how the world works, has driven me to take on the exciting challenges of robotics and artificial intelligence.",
-    intro2: "I specialize in software development for robotic platforms and AI-powered applications, with a strong focus on Generative AI and intelligent agents. I've also worked on web interfaces and deployed solutions on Google Cloud Platform, always aiming to build systems that are both technically solid and practically valuable.",
+    intro1: "I'm a software engineer specializing in robotics and AI, with nearly four years of experience developing technology for industrial environments.",
+    intro2: "I currently design autonomous navigation for UGVs at Alisys. Previously, I developed mobile and collaborative robots at Acciona and generative AI solutions for UNIR through Syntonize. I also teach mobile robotics at ICAI.",
     
     // Section headers
-    professionalPath: "Experience",
+    professionalPath: "Professional Experience",
+    teachingPath: "Teaching Experience",
     academicJourney: "Education",
     technicalEcosystem: "Skills",
     certificationsTitle: "Certifications & Courses",
@@ -176,7 +177,8 @@ export const aboutPageTranslations = {
       intro1: "End-to-end software development for autonomous navigation systems, sensor integration, and field testing on mobile robotic platforms for critical and industrial environments.",
       projectTitle: "Robotics & Autonomous Systems",
       projectList: [
-        "**Autonomous UGV navigation & digital twin:** built the outdoor autonomous navigation stack from scratch, fusing 3D **Ouster LiDAR**, dual-antenna GNSS RTK, and wheel encoders for precise positioning and autonomous docking. Created a high-fidelity **Gazebo** digital twin to validate the system before critical 24/7 deployment at a military base.",
+        "**Autonomous UGV navigation & digital twin:** built the outdoor autonomous navigation stack from scratch, fusing 3D **Ouster LiDAR**, dual-antenna GNSS RTK, and wheel encoders for precise positioning. Created a high-fidelity **Gazebo** digital twin to validate the system before critical 24/7 deployment at a military base.",
+        "**Vision-based autonomous docking:** developed a precision charging system using an **Intel RealSense** depth camera and three **AprilTag** markers.",
         "**Spot payload integration & 3D scanning:** integrated a **Leica LiDAR** payload with Spot CORE on a **Boston Dynamics Spot** robot to generate 3D point clouds and spatial maps at new construction sites.",
         "**Extreme-environment testing:** evaluated a **V60** quadruped in a simulated tunnel fire. Analyzed localization stability, thermal drift, and LiDAR/IMU sensor degradation in dense smoke and high temperatures to assess its viability for search-and-rescue operations."
       ]
@@ -202,14 +204,13 @@ export const aboutPageTranslations = {
     syntonize: {
       clickToExpand: "See more details",
       clickToCollapse: "See less details",
-      intro1: "Design of **solution architectures**, **deployment**, **stakeholder communication** management, and **monitoring** of applications in **production**.",
-      projectTitle: "Generative AI & Cloud",
+      intro1: "As a **Software Developer / AI Engineer**, I design and architect **Generative AI** solutions for **UNIR (Proeduca)**. The application ecosystem uses **LangGraph** to orchestrate complex agentic workflows and is deployed as microservices on **Microsoft Azure**.",
+      projectTitle: "Generative AI and Automation Projects",
       projectList: [
-        "Development of an application for inferring psychographic profiles (motivations, salaries, age) and estimating personal data of leads using Generative AI to optimize conversion at UNIR.",
-        "Implementation of a call analysis pipeline (**Speech-to-Text** + **LLMs**) to extract information and evaluate commercial quality (audits).",
-        "Development of **Real-time Voice Agents** for answering phone calls.",
-        "Design of a **Generative AI** application for career recommendation based on professional trajectories.",
-        "Cloud deployments managed with **Terraform** on **Microsoft Azure** (FastAPI, microservices)."
+        "**1. Predictive profiling and real-time sales personalization:** a **LangGraph** engine extracts each lead's experience, education, and academic interests, then generates estimated interests, tailored sales strategies, and personalized messages in real time. Deployed on **Azure Web Apps**, with NoSQL profile storage and two-way **Salesforce** integration through middleware and REST APIs.",
+        "**2. Intelligent call-auditing pipeline:** a **Speech-to-Text + LLM** pipeline processes up to **3,000 calls per day**, extracts student information, and evaluates sales representatives against quality rubrics. **Arize Phoenix** monitors LLM traces; **MLflow** and **Metabase** manage prompt versions and metrics. **LLM-as-a-Judge** evaluators measure faithfulness, relevance, and rubric adherence against a baseline.",
+        "**3. Autonomous voice and text agents:** real-time voice agents integrate **Deepgram**, **ElevenLabs**, and **LiveKit (WebRTC)** for interruption handling, tool calling, and hand-off to human advisors in **Salesforce**. A **WhatsApp** agent provides asynchronous follow-up, while adversarial agents support red teaming and edge-case testing. Deployed on **Azure Kubernetes** clusters with real-time observability and alerts through **Microsoft Teams** and **Telegram**.",
+        "**4. Career recommendation:** a **Generative AI** application recommends educational programs based on professional trajectories."
       ]
     },
     acciona: {
@@ -223,26 +224,25 @@ export const aboutPageTranslations = {
       roboticsSection: {
         title: "Robotics",
         manipulation: {
-            title: "Manipulation & Mobile Robots",
+            title: "Manipulation & Collaborative Robots (Cobots)",
             items: [
-                "Programmed collaborative robotic arms (**UR3**, **UR10**) for automated tasks, including the detection and classification of waste using AI-based models and 3D point clouds.",
-                "Deployed and programmed a **MiR** mobile robot for autonomous navigation and workspace disinfection within a corporate campus environment.",
-                "Operated and maintained Boston Dynamics **Spot**, deploying it in public events and high-risk zones for inspection and monitoring tasks.",
-                "Calibration and configuration of **underwater robots** (ROVs) for inspection and maintenance."
+                "**AI-Powered Waste Sorting (UR3):** programmed a **UR3** cobot for automated pick-and-place tasks. Developed a computer vision pipeline using 3D point-cloud processing and AI classification models to detect, grasp, and sort waste into designated recycling bins.",
+                "**Force-Controlled Surface Sanding (UR10):** engineered a wall-sanding application using a **UR10** cobot, force-torque sensor, and sanding end-effector. Implemented a custom **PID** loop to dynamically regulate linear and angular forces for consistent surface abrasion.",
+                "**Underwater Inspection:** calibrated and configured **ROVs** for subsea infrastructure inspection and maintenance."
             ]
         },
         navigation: {
-            title: "Navigation & Sensors",
+            title: "Autonomous Navigation & Mobile Robots",
             items: [
-                "Diagnosed and repaired sensor and computer connections on a **Summit-XL** robot, enabling autonomous navigation using **2D LiDAR**, **RTK-GPS**, and **IMU**, integrated via **Kalman filters** and **AMCL** within the **ROS** ecosystem.",
-                "Designed and implemented a trajectory-following algorithm for the **Summit-XL** to perform nighttime security patrols, capturing images and triggering alarms upon detecting anomalies."
+                "**Outdoor Autonomy & Teleoperation (Summit-XL):** designed and implemented localization and navigation for a **Summit-XL UGV**, enabling outdoor autonomy with georeferenced maps and local obstacle avoidance. Fused **2D LiDAR**, **RTK-GPS**, and **IMU** with Kalman filters and **AMCL**. Built a low-latency web GUI using **WebRTC** and **WebSockets** for remote teleoperation and autonomous mission generation, including nighttime anomaly-detection patrols.",
+                "**Campus-Wide Disinfection (MiR):** deployed a **MiR** across the Acciona corporate campus for automated workspace disinfection. Mapped large environments, optimized routes, and semantically defined restricted and preferred navigation zones."
             ]
         },
         interfaces: {
-            title: "Interfaces & Service Robots",
+            title: "Service Platforms & Inspection",
             items: [
-                "Developed a real-time web interface to remotely control the **Summit-XL** robot, using **WebSockets** communication, hosted on **Docker**ized **NGINX** servers running on Ubuntu.",
-                "Programmed service robots **KettyBot** and **Bellabot** to operate in a café environment, delivering food and interacting with customers autonomously."
+                "**Hospitality Automation:** programmed and deployed **Pudu Robotics KettyBot and BellaBot** service platforms in the campus restaurant for automated food delivery and autonomous customer interaction.",
+                "**Industrial Inspection:** operated and deployed Boston Dynamics **Spot** for client demonstrations at major public events and inspection routines in high-risk corporate zones."
             ]
         }
       },
@@ -253,17 +253,17 @@ export const aboutPageTranslations = {
         generativeAi: {
           title: "Generative AI & Agents",
           items: [
-            "Developed an unstructured document ingestion system for PDFs, Word, Excel, PowerPoint files, and images, using **OCR** and **YOLO** for detecting tables and visual elements. The pipeline extracted raw content, generated summaries, and computed embeddings for semantic indexing. All tasks were orchestrated via a microservice architecture with **Celery**-based asynchronous processing, enabling seamless integration into downstream **RAG** systems.",
-            "Built an agent-based **RAG** system with Human-in-the-Loop (**HITL**) interaction, capable of executing **SQL** queries against structured databases and retrieving predefined admin-defined responses. The agent applied advanced question reformulation and disambiguation strategies, transparently communicating data sources.",
-            "Designed and developed an inconsistency detection algorithm across large document bases using semantic filtering and a graph-based structure. Documents were organized hierarchically, enabling relationship-based reasoning to identify contradictions. Use of **Knowledge Graphs** and **MCP** protocol.",
-            "Fine-tuning of **Deepseek** LLM locally using quantization techniques, **LoRA**, etc., and on **GCP** with their **Gemini** model. Extraction of metrics from RAG systems. GCP deployments."
+            "**Multimodal Document Ingestion:** built an ingestion pipeline for PDFs, Word documents, Excel spreadsheets, PowerPoint presentations, and images. Used **OCR** and **YOLO** for multimodal transcription, table detection, and visual-element extraction. Generated summaries and semantic embeddings, orchestrated through asynchronous **Celery** microservices.",
+            "**Agentic RAG with Human-in-the-Loop:** developed an agent-driven **RAG** architecture with **HITL** capabilities. Agents formulate and execute **SQL** queries, reformulate complex questions, disambiguate intent, transparently cite data sources, and handle overlapping or conflicting references.",
+            "**Knowledge Graph Inconsistency Detection:** designed a semantic inconsistency-detection algorithm for large corporate document collections. Used **Knowledge Graphs** and hierarchical document relationships for multi-level comparisons to identify contradictions and overlapping clauses in legal and technical texts.",
+            "**Local LLM Fine-Tuning:** fine-tuned **DeepSeek** models using **LoRA** and quantization to optimize performance and inference on constrained hardware. Extracted metrics from RAG systems and deployed solutions on **Google Cloud Platform (GCP)**."
           ]
         },
         dataScience: {
             title: "Data Science",
             items: [
-                "Developed a predictive modeling system to optimize bidding strategies in public tenders by forecasting competitors' offers. Combined **Neural Networks**, K-Nearest Neighbors (**KNN**), and **Monte Carlo** simulations. Integrated the model into a Django-based web interface.",
-                "Trained a convolutional neural network (**CNN**) using **TensorFlow** to detect cracks in road surfaces. The model was trained on annotated datasets and contributed to the automation of road inspection workflows."
+                "**Public Tender Optimization (Abnormally Low Bids):** developed a predictive system to optimize bids and forecast abnormally low offers. Combined **Monte Carlo** simulations, **KNN** to identify similar historical tenders, **NLP** embeddings for semantic tender-document analysis, and a neural network that predicts the exact number of competitors with greater accuracy than Acciona's internal baseline. Integrated it into a **Django** web application for parameter adjustment and scenario exploration.",
+                "**Computer Vision for Infrastructure:** trained a **TensorFlow** convolutional neural network (**CNN**) on annotated image datasets to detect and classify road-surface cracks, streamlining civil infrastructure inspections."
             ]
         }
       },

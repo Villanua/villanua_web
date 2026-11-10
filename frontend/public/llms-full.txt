@@ -15,7 +15,7 @@ He has worked in research and industrial environments and enjoys challenges that
 - GitHub: https://github.com/Villanua
 - Website: https://ignacio-villanua.com/
 
-Nacho is currently focused on his projects at Alisys and ICAI Comillas. In October 2026, he delivered a one-off executive masterclass at ISDI in partnership with EY. He is open to conversations about collaborations, technical consulting, and projects involving robotics and AI. The website indicates a typical response time of 24–48 hours.
+Nacho's current work spans robotics at Alisys and teaching at ICAI Comillas. Previously, he developed Generative AI solutions for UNIR (Proeduca) through Syntonize. In October 2026, he delivered a one-off executive masterclass at ISDI in partnership with EY. He is open to conversations about collaborations, technical consulting, and projects involving robotics and AI. The website indicates a typical response time of 24–48 hours.
 
 ## Professional Experience
 
@@ -31,6 +31,59 @@ Responsible for the end-to-end software development of autonomous navigation sys
 - **Spot Payload Integration & 3D Scanning:** Integrated a Leica LiDAR payload with Spot CORE on a Boston Dynamics Spot robot, enabling automated 3D point cloud generation and spatial mapping in new construction environments.
 - **Extreme Environment Testing:** Conducted field testing and sensory performance evaluation of a quadruped robot (V60) inside a simulated tunnel fire. Analyzed localization stability, thermal drift, and sensor degradation (LiDAR/IMU) under severe smoke and high-temperature conditions to assess operational viability for search and rescue operations.
 
+### Software Developer / AI Engineer — Syntonize | Generative AI Consulting for UNIR (Proeduca)
+
+**July 2025–May 2026**
+
+Designs and architects Generative AI solutions for commercial-process optimization, quality auditing, and automated customer interaction. The application ecosystem uses LangGraph to orchestrate complex agentic workflows and is deployed natively on Microsoft Azure using microservices.
+
+#### Key Projects
+
+- **Predictive Lead Profiling and Real-Time Sales Personalization:** Designed a Generative AI engine to qualify prospective students and improve conversion. LangGraph workflows extract each lead's previous experience, education, and program of interest, estimate underlying interests, and generate tailored sales strategies and personalized messages in real time. Deployed on Azure Web Apps with NoSQL profile storage and bidirectional Salesforce integration through middleware and REST APIs, surfacing predictions directly in advisors' CRM workspace.
+- **Intelligent Call Auditing and Large-Scale Analysis:** Developed a LangGraph-based Speech-to-Text and LLM pipeline capable of processing and inspecting **3,000 sales calls per day**. It extracts structured information about students' experience, education, and interests, and evaluates advisors against detailed university sales and quality rubrics. Arize Phoenix records and monitors LLM traces; MLflow and Metabase support prompt versioning and metric dashboards. LLM-as-a-Judge evaluators measure faithfulness, relevance, and rubric adherence against a baseline to assess performance changes.
+- **Autonomous Voice and Text Agents for Lead Recovery:** Built conversational agents to re-engage inactive leads who had previously expressed interest in a program. Real-time voice agents combine Deepgram speech recognition, ElevenLabs speech synthesis, and LiveKit over WebRTC for interruption handling, tool calling, and seamless hand-off to a human advisor in Salesforce when a lead signals purchase intent. A WhatsApp agent preserves context for asynchronous follow-up. Adversarial LLM agents simulate erratic, challenging, or ambiguous users to uncover edge cases and improve robustness before production. Deployed on Microsoft Azure Kubernetes clusters, with real-time observability and alerts through Microsoft Teams and Telegram.
+- **Generative AI Career Recommendation:** Developed an application that recommends educational programs based on professional trajectories.
+
+### Software Developer, Digital Hub — Acciona
+
+**January 2023–July 2025**
+
+Worked on the design and development of applications that bring emerging technologies into real business solutions. Backend development was the primary role, with contributions to frontend work across projects. Participated throughout the delivery lifecycle: gathering requirements directly from clients, analyzing needs, designing system architectures, planning resources and timelines, developing products, and following up with clients to align delivery and iteratively improve solutions.
+
+#### Robotics
+
+**Manipulation and Collaborative Robots (Cobots)**
+
+- **AI-Powered Waste Sorting (UR3):** Programmed a UR3 collaborative robotic arm for automated pick-and-place tasks. Developed a computer vision pipeline using 3D point-cloud processing and AI classification models to detect, grasp, and sort waste into designated recycling bins.
+- **Force-Controlled Surface Sanding (UR10):** Engineered a robotic wall-sanding application using a UR10 cobot equipped with a force-torque sensor and sanding end-effector. Implemented a custom PID control loop to dynamically regulate linear and angular forces for consistent, uniform surface abrasion.
+- **Underwater Inspection:** Calibrated and configured remotely operated vehicles (ROVs) for subsea infrastructure inspection and maintenance.
+
+**Autonomous Navigation and Mobile Robots (UGVs & AMRs)**
+
+- **Outdoor Autonomy and Teleoperation (Summit-XL):** Designed and implemented the localization and navigation stack for a Summit-XL UGV. Enabled outdoor autonomy using georeferenced maps and local obstacle avoidance by fusing 2D LiDAR, RTK-GPS, and IMU through Kalman filters and AMCL. Developed a custom web GUI using WebRTC and WebSockets for low-latency remote teleoperation and autonomous mission generation.
+- **Campus-Wide Disinfection (MiR):** Deployed a Mobile Industrial Robot (MiR) across the Acciona corporate campus for automated workspace disinfection. Managed large-scale environment mapping, route optimization, and semantic definition of restricted and preferred navigation zones.
+
+**Service Platforms and Quadrupeds**
+
+- **Hospitality Automation:** Programmed and deployed Pudu Robotics service platforms (KettyBot and BellaBot) in the campus restaurant for automated food delivery and autonomous customer interaction.
+- **Industrial Inspection:** Operated and deployed Boston Dynamics Spot for client demonstrations at major public events and inspection routines in high-risk corporate zones.
+
+#### Generative AI, Agents, and Data Science
+
+**Data Science and Predictive Modeling**
+
+- **Public Tender Optimization (Abnormally Low Bids):** Developed a predictive system to optimize bidding strategies and forecast abnormally low bids. Combined Monte Carlo simulations for scenario planning, KNN to identify historically similar tenders, NLP embeddings for semantic analysis of tender documents, and a neural network to predict the exact number of competitors. Its prediction accuracy exceeded Acciona's internal baseline. Integrated the model into a Django web application for parameter adjustment and scenario exploration.
+- **Computer Vision for Infrastructure:** Trained a TensorFlow convolutional neural network (CNN) on annotated image datasets to automatically detect and classify road-surface cracks, streamlining civil infrastructure inspections.
+
+**Generative AI and Intelligent Agents**
+
+- **Multimodal Document Ingestion:** Built an unstructured-document pipeline for PDFs, Word documents, Excel spreadsheets, PowerPoint presentations, and images. Used OCR and YOLO for multimodal transcription, table detection, and visual-element extraction. Generated summaries and semantic embeddings, orchestrated through asynchronous Celery microservices.
+- **Agentic RAG with Human-in-the-Loop:** Developed a Retrieval-Augmented Generation (RAG) architecture driven by autonomous agents with Human-in-the-Loop (HITL) capabilities. Agents formulate and execute SQL queries against structured databases, reformulate complex questions, disambiguate intent, transparently cite data sources, and handle overlapping or conflicting references.
+- **Knowledge Graph Inconsistency Detection:** Designed a semantic inconsistency-detection algorithm for large corporate document collections. Leveraged Knowledge Graphs and hierarchical document relationships for multi-level comparisons to identify contradictions and overlapping clauses across legal and technical texts.
+- **Local LLM Fine-Tuning:** Fine-tuned DeepSeek models locally using LoRA (Low-Rank Adaptation) and quantization to optimize performance and inference speed on constrained hardware. Extracted evaluation metrics from RAG systems and deployed solutions on Google Cloud Platform (GCP).
+
+## Teaching Experience
+
 ### Associate Professor of Mobile Robotics — ICAI, Universidad Pontificia Comillas
 
 **January 2026–Present**
@@ -42,59 +95,6 @@ Leads practical sessions and laboratories for undergraduate students focused on 
 **October 2026**
 
 Delivered a one-off executive masterclass for executives and middle managers on the strategic adoption of Artificial Intelligence, Robotics, and Autonomous Systems.
-
-### Software Developer — Syntonize
-
-**July 2025–April 2026**
-
-Consulted for UNIR (Proeduca) on Generative AI applications. Responsibilities included designing solution architectures, deployments, stakeholder communication, and production application monitoring.
-
-#### Generative AI and Cloud Projects
-
-- Developed an application that uses Generative AI to infer psychographic profiles, including motivations, salary ranges, and age, and estimate lead attributes to help optimize conversion at UNIR.
-- Implemented a call-analysis pipeline combining Speech-to-Text and large language models (LLMs) to extract information and assess commercial quality through audits.
-- Developed real-time voice agents to answer telephone calls.
-- Designed a Generative AI application that recommends careers based on professional trajectories.
-- Managed cloud deployments with Terraform on Microsoft Azure, using FastAPI and microservices.
-
-### Software Developer, Digital Hub — Acciona
-
-**January 2023–July 2025**
-
-Worked on the design and development of applications that bring emerging technologies into real business solutions. Backend development was the primary role, with contributions to frontend work across projects. Participated throughout the delivery lifecycle: gathering requirements directly from clients, analyzing needs, designing system architectures, planning resources and timelines, developing products, and following up with clients to align delivery and iteratively improve solutions.
-
-#### Robotics
-
-**Manipulation and mobile robots**
-
-- Programmed UR3 and UR10 collaborative robotic arms for automated tasks, including waste detection and classification using AI-based models and 3D point clouds.
-- Deployed and programmed a MiR mobile robot for autonomous navigation and workspace disinfection in a corporate campus.
-- Operated and maintained Boston Dynamics Spot at public events and in high-risk zones for inspection and monitoring.
-- Calibrated and configured underwater robots (ROVs) for inspection and maintenance.
-
-**Navigation and sensors**
-
-- Diagnosed and repaired sensor and computer connections on a Summit-XL robot, enabling autonomous navigation with 2D LiDAR, RTK-GPS, and IMU. Integrated the sensors using Kalman filters and AMCL within ROS.
-- Designed and implemented a trajectory-following algorithm for nighttime security patrols with Summit-XL. The robot captured images and triggered alarms when it detected anomalies.
-
-**Interfaces and service robots**
-
-- Developed a real-time web interface for remote Summit-XL control using WebSockets. Hosted it on Dockerized NGINX servers running Ubuntu.
-- Programmed KettyBot and Bellabot service robots to deliver food and interact autonomously with customers in a café environment.
-
-#### Generative AI, Agents, and Data Science
-
-**Generative AI and intelligent agents**
-
-- Developed an unstructured-document ingestion system for PDFs, Word documents, Excel spreadsheets, PowerPoint presentations, and images. It used OCR and YOLO to detect tables and visual elements, extracted raw content, generated summaries, and computed embeddings for semantic indexing. Celery-based asynchronous processing orchestrated the work across microservices for integration with downstream RAG systems.
-- Built an agent-based Retrieval-Augmented Generation (RAG) system with Human-in-the-Loop (HITL) interaction. The system could execute SQL queries against structured databases and retrieve predefined administrator-configured answers. It used question reformulation and disambiguation, communicated the data sources transparently, and handled multiple references with overlapping or conflicting answers.
-- Designed and developed a semantic and graph-based inconsistency detection algorithm for large document collections. Hierarchical document relationships supported multi-level comparison to find contradictions and overlapping content. The work used Knowledge Graphs and the Model Context Protocol (MCP).
-- Fine-tuned DeepSeek models locally using quantization and LoRA, and worked with Gemini on Google Cloud Platform (GCP). Extracted metrics from RAG systems and deployed solutions on GCP.
-
-**Data science**
-
-- Developed a predictive modeling system to optimize public-tender bidding strategies by forecasting competitors' offers. Combined neural networks, K-Nearest Neighbors (KNN), and Monte Carlo simulations, and integrated the model into a Django web interface for parameter adjustment and scenario exploration.
-- Trained a TensorFlow convolutional neural network (CNN) on annotated datasets to detect cracks in road surfaces and automate road-inspection workflows.
 
 ## Education
 

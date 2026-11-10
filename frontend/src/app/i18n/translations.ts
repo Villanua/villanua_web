@@ -23,6 +23,7 @@ export const translations = {
     
     // Professional Experience
     experienceLabel: "Experiencia Profesional",
+    teachingExperienceLabel: "Experiencia Docente",
     
     // Academic Formation
     educationLabel: "Formación Académica",
@@ -61,6 +62,7 @@ export const translations = {
     
     // Professional Experience
     experienceLabel: "Professional Experience",
+    teachingExperienceLabel: "Teaching Experience",
     
     // Academic Formation
     educationLabel: "Academic Formation",

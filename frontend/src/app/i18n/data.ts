@@ -5,8 +5,22 @@ export const dataTranslations = {
         role: 'Especialista en Robótica',
         company: 'Alisys',
         period: 'Mayo 2026 - Actualidad',
-        description: 'Desarrollo de software de navegación autónoma, integración de sensores y pruebas de campo para robots móviles (UGVs y cuadrúpedos) en entornos críticos e industriales.'
+        description: 'Desarrollo desde cero de navegación autónoma para UGVs, fusión de sensores y conectividad cloud, además de integración y pruebas de cuadrúpedos en entornos industriales.'
       },
+      {
+        role: 'Software Developer / AI Engineer',
+        company: 'Syntonize',
+        period: 'Julio 2025 - Mayo 2026',
+        description: 'Diseño de soluciones de IA generativa para UNIR (Proeduca): personalización de ventas, auditoría de hasta 3.000 llamadas diarias y agentes conversacionales. Orquestación con LangGraph y despliegue de microservicios en Microsoft Azure.'
+      },
+      {
+        role: 'Software Developer @ Digital Hub',
+        company: 'Acciona',
+        period: 'Enero 2023 - Julio 2025',
+        description: 'Ingeniero de Software Full Stack especializado en **Robótica** e **Inteligencia Artificial Generativa**. Desarrollo de soluciones de robótica colaborativa y móvil, desde control de fuerza en cobots hasta navegación autónoma y teleoperación. Creación de sistemas de **IA Generativa**, agentes **RAG**, modelos predictivos y visión artificial, integrando tecnologías cloud y necesidades de negocio.'
+      }
+    ],
+    teachingExperience: [
       {
         role: 'Profesor Asociado de Robótica Móvil',
         company: 'ICAI - Universidad Pontificia Comillas',
@@ -18,18 +32,6 @@ export const dataTranslations = {
         company: 'ISDI',
         period: 'Octubre 2026',
         description: 'Impartición puntual de una masterclass ejecutiva, en alianza con EY, sobre la adopción estratégica de Inteligencia Artificial, Robótica y Sistemas Autónomos.'
-      },
-      {
-        role: 'Software Developer',
-        company: 'Syntonize',
-        period: 'Julio 2025 - Abril 2026',
-        description: 'Consultoría para la UNIR (Proeduca) en aplicaciones basadas en IA generativa, incluyendo NLP y Marketing Predictivo.'
-      },
-      {
-        role: 'Software Developer @ Digital Hub',
-        company: 'Acciona',
-        period: 'Enero 2023 - Julio 2025',
-        description: 'Ingeniero de Software Full Stack especializado en **Robótica** e **Inteligencia Artificial Generativa**. Liderazgo del ciclo completo de desarrollo de **sistemas autónomos** (**ROS**, **Spot**, **ROVs**) y arquitecturas **RAG** avanzadas (**Agentes**, **HITL**, **Grafos de Conocimiento**), integrando soluciones cloud robustas (**GCP**, **Docker**, **Celery**) directamente con las necesidades de negocio.'
       }
     ],
     education: [
@@ -60,8 +62,22 @@ export const dataTranslations = {
         role: 'Robotics Specialist',
         company: 'Alisys',
         period: 'May 2026 - Present',
-        description: 'Developing autonomous navigation software, integrating sensors, and conducting field tests for mobile robotic platforms (UGVs and quadrupeds) in critical and industrial environments.'
+        description: 'Building autonomous UGV navigation from scratch, integrating sensor fusion and cloud connectivity, and deploying and testing quadrupeds in industrial environments.'
       },
+      {
+        role: 'Software Developer / AI Engineer',
+        company: 'Syntonize',
+        period: 'July 2025 - May 2026',
+        description: 'Designed Generative AI solutions for UNIR (Proeduca): sales personalization, auditing up to 3,000 calls per day, and conversational agents. Orchestrated workflows with LangGraph and deployed microservices on Microsoft Azure.'
+      },
+      {
+        role: 'Software Developer @ Digital Hub',
+        company: 'Acciona',
+        period: 'January 2023 - July 2025',
+        description: 'Full Stack Software Engineer specialized in **Robotics** and **Generative AI**. Developed collaborative and mobile robotics solutions, from force-controlled cobot applications to autonomous navigation and teleoperation. Built **Generative AI** systems, **RAG** agents, predictive models, and computer vision solutions, connecting cloud technologies with business needs.'
+      }
+    ],
+    teachingExperience: [
       {
         role: 'Associate Professor of Mobile Robotics',
         company: 'ICAI - Universidad Pontificia Comillas',
@@ -73,18 +89,6 @@ export const dataTranslations = {
         company: 'ISDI',
         period: 'October 2026',
         description: 'Delivered a one-off executive masterclass, in partnership with EY, on the strategic adoption of Artificial Intelligence, Robotics, and Autonomous Systems.'
-      },
-      {
-        role: 'Software Developer',
-        company: 'Syntonize',
-        period: 'July 2025 - April 2026',
-        description: 'Consulting for UNIR (Proeduca) on generative AI applications, including NLP and Predictive Marketing.'
-      },
-      {
-        role: 'Software Developer @ Digital Hub',
-        company: 'Acciona',
-        period: 'January 2023 - July 2025',
-        description: 'Full Stack Software Engineer specialized in **Robotics** and **Generative AI**. Leadership of the full development lifecycle of **autonomous systems** (**ROS**, **Spot**, **ROVs**) and advanced **RAG** architectures (**Agents**, **HITL**, **Knowledge Graphs**), integrating robust cloud solutions (**GCP**, **Docker**, **Celery**) directly with business needs.'
       }
     ],
     education: [

@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Plus, Minus, BrainCircuit, Bot, ChevronRight, Wrench, Sparkles } from 'lucide-react';
-import { useState, useRef } from 'react';
+import { Fragment, useState, useRef } from 'react';
 import Navigation from '../components/Navigation';
 import ExpandableSection from '../components/ExpandableSection';
 import EducationCard from '../components/EducationCard';
@@ -9,15 +9,17 @@ import { useLanguage, translations } from '../i18n';
 interface AboutPageProps {
   education: readonly any[];
   experience: readonly any[];
+  teachingExperience: readonly any[];
   courses: readonly any[];
   skills: readonly any[];
 }
 
-export default function AboutPage({ education, experience, courses, skills }: AboutPageProps) {
+export default function AboutPage({ education, experience, teachingExperience, courses, skills }: AboutPageProps) {
   const lang = useLanguage();
   const t = translations[lang];
   const [expandedIndices, setExpandedIndices] = useState<number[]>([]);
   const experienceRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const allExperience = [...experience, ...teachingExperience];
 
   const handleScrollToSection = () => {};
 
@@ -117,17 +119,8 @@ export default function AboutPage({ education, experience, courses, skills }: Ab
 
           {/* Experience Section */}
           <section className="mb-40">
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6 }}
-              className="flex items-end justify-end border-b border-zinc-100 pb-4 mb-12"
-            >
-              <h3 className="text-sm font-bold tracking-[0.3em] text-zinc-400">{t.professionalPath}</h3>
-            </motion.div>
             <div className="space-y-8">
-              {experience.map((exp: any, index: number) => {
+              {allExperience.map((exp: any, index: number) => {
                 const details = exp.company === 'Alisys' ? t.alisys :
                               exp.company === 'Acciona' ? t.acciona :
                               exp.company === 'Syntonize' ? t.syntonize : 
@@ -137,6 +130,29 @@ export default function AboutPage({ education, experience, courses, skills }: Ab
                 const isExpanded = expandedIndices.includes(index);
                 
                 return (
+                <Fragment key={index}>
+                {index === 0 && experience.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6 }}
+                    className="flex items-end justify-end border-b border-zinc-100 pb-4 mb-12"
+                  >
+                    <h3 className="text-sm font-bold tracking-[0.3em] text-zinc-400">{t.professionalPath}</h3>
+                  </motion.div>
+                )}
+                {index === experience.length && teachingExperience.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6 }}
+                    className="flex items-end justify-end border-b border-zinc-100 pb-4 mb-12"
+                  >
+                    <h3 className="text-sm font-bold tracking-[0.3em] text-zinc-400">{t.teachingPath}</h3>
+                  </motion.div>
+                )}
                 <motion.div
                   key={index}
                   ref={(el: HTMLDivElement | null) => { experienceRefs.current[index] = el; }}
@@ -329,7 +345,8 @@ export default function AboutPage({ education, experience, courses, skills }: Ab
                     </div>
                   </div>
                 </motion.div>
-                );
+                </Fragment>
+                )
               })}
             </div>
           </section>

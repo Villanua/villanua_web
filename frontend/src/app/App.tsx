@@ -8,6 +8,7 @@ import { dataTranslations, skillsData } from './i18n/data';
 export default function App() {
   const lang = useLanguage();
   const experienceData = dataTranslations[lang].experience;
+  const teachingExperienceData = dataTranslations[lang].teachingExperience;
   const educationData = dataTranslations[lang].education;
   const coursesData = dataTranslations[lang].courses;
 
@@ -15,7 +16,7 @@ export default function App() {
     <Routes>
       <Route 
         path="/" 
-        element={<HomePage experience={experienceData} education={educationData} />} 
+        element={<HomePage experience={experienceData} teachingExperience={teachingExperienceData} education={educationData} />} 
       />
       <Route 
         path="/about" 
@@ -23,6 +24,7 @@ export default function App() {
           <AboutPage 
             education={educationData} 
             experience={experienceData} 
+            teachingExperience={teachingExperienceData}
             courses={coursesData} 
             skills={skillsData} 
           />
