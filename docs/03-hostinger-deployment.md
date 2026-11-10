@@ -1,47 +1,45 @@
-# Module 3: Deployment to Hostinger
+# Module 3: Hostinger Deployment
 
-There are two main ways to deploy your application: manual ZIP upload or GitHub Auto-deploy.
+The current website deployment uses Hostinger's Node.js Git integration to build and serve the React/Vite frontend as a static site. The React app is in `frontend/`; the root Express server is a separate deployment option and is not used by this Hostinger configuration.
 
-## ⚙️ Root package.json Configuration
-Ensure your root `package.json` contains the following scripts to support the deployment commands:
+## Current Hostinger Settings
 
-```json
-  "scripts": {
-    "install-all": "npm install && cd frontend && npm install",
-    "build": "cd frontend && npm install && npm run build",
-    "start": "node index.js"
-  },
-```
+Configure the repository in hPanel with:
 
----
+| Setting | Value |
+| --- | --- |
+| Repository | `villanua_web` |
+| Branch | `update/alisys-update` |
+| Root directory | `frontend` |
+| Framework / structure | React |
+| Build configuration | Custom |
+| Node.js version | `22.x` |
+| Build command | `npm run build` |
+| Output directory | `dist` |
+| Entry file | Leave empty (static frontend) |
 
-## 📦 Method A: Manual ZIP Upload (Legacy)
-1. **Build the frontend** locally: 
-   ```bash
-   cd frontend && npm run build
-   ```
-2. **Create a ZIP** including ONLY:
-   - `index.js`
-   - `package.json`
-   - `frontend/dist/`
-3. ⚠️ **IMPORTANT**: Do **NOT** include `node_modules` or `package-lock.json`.
-4. **Upload** via Hostinger's **Node.js Apps** panel.
+The `frontend/package.json` file defines `build` as `vite build`. Since the root directory is `frontend`, do not prefix the build command with `cd frontend`.
 
----
+The branch is the one currently configured in Hostinger; update this value here if the deployment branch changes.
 
-## 🤖 Method B: GitHub Integration (Recommended)
-1. Push your code to a GitHub branch (e.g., `main`).
-2. Connect the repository in the Hostinger **hPanel**.
-3. **Build Settings**:
-   - **Install Command**: `npm install`
-   - **Build Command**: `cd frontend && npm install && npm run build`
-   - **Start Command**: `npm start`
+## Deploying
 
----
+1. Connect the GitHub repository through Hostinger's Node.js Git deployment flow.
+2. Set the values in the table above. Confirm the root directory is `frontend`, not the repository root.
+3. Deploy or push to the configured branch.
+4. Review the build log and confirm that the `dist` output is served.
+5. Test `/`, `/about`, and `/contact`, including direct navigation or refresh on each route.
 
-## 🛠️ Troubleshooting & Tips
-If you encounter a **503 Service Unavailable** error:
+Use the Node.js Git integration when Hostinger needs to install dependencies and run the Vite build. Hostinger's generic Git deployment only copies repository files to a directory; it does not run `npm run build`.
 
-1. **Clean Slate**: Delete the `node_modules` folder in the Hostinger File Manager and re-run installation.
-2. **Node Version**: Ensure you are using **Node.js v22.x** (or the latest LTS).
-3. **Logs**: Check `stderr.log` for "Module Not Found" errors to identify missing dependencies.
+## Domain and Routing Checks
+
+The app uses React Router with client-side routes. If a route works through in-app navigation but returns 404 when opened or refreshed directly, check the host's SPA fallback configuration.
+
+If `www` works but the apex domain (without `www`) returns a Hostinger 404, check that both domain variants are assigned to the same website and configure the desired redirect in hPanel. This is separate from the Vite build.
+
+## Other Deployment Options
+
+The repository root also contains an Express server that serves `frontend/dist` and falls back to `index.html` for SPA routes. Use that approach only when deploying the root Node.js application, rather than the current static React configuration.
+
+For local development and frontend architecture, see [Website Documentation](./04-website.md).
